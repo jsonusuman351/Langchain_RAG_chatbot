@@ -2,10 +2,10 @@ import os
 from pathlib import Path
 import logging
 
-# Basic logging configuration
+# Configure logging for the application. This will help track file and directory creation events.
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
-# List of all files and folders 
+# Define the list of required files and directories for the project structure.
 list_of_files = [
     ".env",
     "api/app.log",
@@ -18,24 +18,25 @@ list_of_files = [
     "app/api_utils.py",
     "app/chat_interface.py",
     "app/sidebar.py",
-    "app/streamlit_app.py"
+    "app/streamlit_app.py",
+    "app/requirements.txt",
+    "docs/" # Directory for document uploads
 ]
 
-# Loop to create files and folders directly in the current directory
+# Iterate over the list and create missing files and directories as needed.
 for filepath in list_of_files:
-    # Create path directly
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
 
-    # Create folder if it does not exist
-    if filedir != "" and not os.path.exists(filedir):
+    # Ensure the directory exists before creating files inside it.
+    if filedir != "":
         os.makedirs(filedir, exist_ok=True)
-        logging.info(f"Creating directory: {filedir} for the file {filename}")
+        logging.info(f"Directory created: {filedir} for file {filename}")
 
-    # Create empty file if it does not exist or is empty
+    # Create an empty file if it does not exist or is currently empty.
     if not os.path.exists(filepath) or os.path.getsize(filepath) == 0:
         with open(filepath, 'w') as f:
-            pass  # Create empty file
-            logging.info(f"Creating empty file: {filepath}")
+            pass  # File created as a placeholder for future content
+            logging.info(f"Empty file created: {filepath}")
     else:
-        logging.info(f"{filename} already exists")
+        logging.info(f"File already exists: {filename}")
