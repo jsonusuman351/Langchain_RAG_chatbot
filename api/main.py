@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+
+load_dotenv() # Load environment variables from .env file
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from pydantic_models import QueryInput, QueryResponse, DocumentInfo, DeleteFileRequest
 from langchain_utils import get_rag_chain
@@ -7,9 +10,7 @@ import os
 import uuid
 import logging
 import shutil
-from dotenv import load_dotenv
 
-load_dotenv()
 
 logging.basicConfig(filename='app.log', level=logging.INFO)
 app = FastAPI()
