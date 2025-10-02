@@ -5,7 +5,7 @@ import logging
 # Basic logging configuration
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
-# List of all files and folders (excluding .docx and .pdf files)
+# List of all files and folders 
 list_of_files = [
     ".env",
     "api/app.log",
