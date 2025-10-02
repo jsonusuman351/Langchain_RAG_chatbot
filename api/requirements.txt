@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+python-dotenv
+langchain
+langchain-openai
+langchain-community
+langchain-core
+chromadb
+tiktoken
+pydantic
+unstructured
+pdf2image
+pdfminer.six
+unstructured-inference
+pypdf
+docx2txt
+beautifulsoup4
