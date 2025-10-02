@@ -1,15 +1,14 @@
 from pydantic import BaseModel, Field
 from enum import Enum
 from datetime import datetime
-from typing import Optional # <-- यह नई लाइन जोड़ें
-
+from typing import Optional 
 class ModelName(str, Enum):
     GPT4_O = "gpt-4o"
     GPT4_O_MINI = "gpt-4o-mini"
 
 class QueryInput(BaseModel):
     question: str
-    session_id: Optional[str] = None # <-- इस लाइन को बदलें
+    session_id: Optional[str] = None
     model: ModelName = Field(default=ModelName.GPT4_O_MINI)
 
 class QueryResponse(BaseModel):
