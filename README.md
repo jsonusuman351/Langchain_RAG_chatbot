@@ -8,6 +8,17 @@ This project is a fully functional system with a **FastAPI backend** that handle
 
 ---
 
+## 🚀 Deployment & Live Demo
+I've deployed this full-stack application to the web, making it publicly accessible.
+
+Backend API: The FastAPI backend is deployed on Render. Render is a fantastic platform for hosting web services, and it automatically handles building and running the application from my GitHub repository.
+
+Frontend App: The Streamlit frontend is deployed on Streamlit Community Cloud. This provides a simple and free way to host Streamlit applications.
+
+You can try the live application here:
+https://my-rag--chatbot.streamlit.app/
+
+
 ### ✨ Core Features & My Architectural Approach
 
 I designed this project with a clean, decoupled architecture, separating the AI backend from the user-facing application.
@@ -34,7 +45,19 @@ I designed this project with a clean, decoupled architecture, separating the AI 
 
 ### 📸 Screenshots
 
-Here’s a look at the different components of the project in action.
+Here’s a look at the different components of the project in action, including the live deployed versions.
+
+**The Live Streamlit Chat Application:**
+*This is the public web interface where anyone can interact with the chatbot.*
+![Image](https://github.com/user-attachments/assets/dc37946b-acf5-4ff8-9a6b-0031e8f1787a)
+
+**The Deployed Backend on Render:**
+*This screenshot shows the backend service running successfully on the Render platform.*
+![Image](https://github.com/user-attachments/assets/1541592e-88ca-480e-9636-e1986b9a4a85)
+
+**Backend Service Logs on Render:**
+*A look at the live logs, showing the Uvicorn server handling requests.*
+![Image](https://github.com/user-attachments/assets/6010ab81-173c-4c50-81a9-516276ab17fa)
 
 **The Streamlit Chat Interface:**
 *This is the main UI where users can upload a PDF and chat with the AI about its content.*
