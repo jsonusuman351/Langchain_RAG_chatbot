@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://langchain-rag-chatbot-l34n.onrender.com"
 
 def get_api_response(question, session_id, model):
     headers = {
